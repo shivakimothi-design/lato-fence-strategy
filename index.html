@@ -90,7 +90,8 @@
   .grid { display: grid; gap: 14px; }
   .grid.two { grid-template-columns: 1fr 1fr; }
   .grid.four { grid-template-columns: repeat(4, 1fr); }
-  @media (max-width: 720px) { .grid.two, .grid.four { grid-template-columns: 1fr; } }
+  .grid.three { grid-template-columns: repeat(3, 1fr); }
+  @media (max-width: 720px) { .grid.two, .grid.three, .grid.four { grid-template-columns: 1fr; } }
   .card { background: var(--card); border-radius: 10px; padding: 18px 20px; }
   .card h4 { margin: 0 0 6px; font-size: 14px; color: var(--navy); }
   .card p { margin: 0; font-size: 14.5px; color: var(--ink); }
@@ -139,6 +140,10 @@
   .fold .ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
   .fold .cta { background: #E74623; color: #FFF; font-size: 12px; letter-spacing: .1em; font-weight: 700; padding: 12px 22px; border-radius: 4px; }
   .fold .ctab { background: transparent; color: #FFF; border: 1.5px solid #FFFFFF; font-size: 12px; letter-spacing: .1em; font-weight: 700; padding: 10.5px 22px; border-radius: 4px; }
+  .fold { position: relative; overflow: hidden; }
+  .fold-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .fold-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,38,12,.92) 0%, rgba(14,38,12,.62) 48%, rgba(14,38,12,.18) 100%); }
+  .fold-in { position: relative; }
   .fold .cta2 { font-size: 12px; letter-spacing: .1em; color: #FFFFFF; border-bottom: 1px solid #FFD9CC; padding-bottom: 3px; }
   .fold .trust { border-top: 1px solid rgba(255,255,255,.3); margin-top: 38px; padding-top: 16px; font-size: 12px; letter-spacing: .06em; color: #DCEFDC; }
   .figcap { font-size: 13px; color: var(--ink-2); font-style: italic; margin: 8px 2px 0; }
@@ -175,7 +180,7 @@
   <div class="hero-inner">
     <h1>LATO Fence</h1>
     <p class="tag">Control your space.</p>
-    <p style="max-width:64ch; color:#EAF7EB; margin:0 0 26px;">A content, brand, distribution &amp; website strategy.</p>
+    <p style="max-width:64ch; color:#EAF7EB; margin:0 0 26px;">A content, brand, website, distribution &amp; founder-voice strategy.</p>
     
   </div>
 </div>
@@ -192,49 +197,63 @@
 
   <!-- ================= SECTION 1 ================= -->
   <section id="s1">
-    <span class="kicker">Section 1 &#183; Content &amp; Brand Strategy</span>
-    <h2>Where We Play, Who We Talk To, What Hurts</h2>
+    <span class="kicker">Section 1 &#183; Content & Brand Strategy</span>
+    <h2>Two People, One Desire &#8212; Where We Play and Who We Talk To</h2>
 
     <div class="grid two">
       <div class="card">
-        <h4>Priority regions &#8212; concentrate, don't spread</h4>
-        <p><strong>Tier 1:</strong> Uttar Pradesh, Rajasthan &nbsp;&#183;&nbsp; <strong>Tier 2:</strong> Haryana &nbsp;&#183;&nbsp; <strong>Tier 3:</strong> Bihar, Chhattisgarh, Uttarakhand.</p>
-        <p class="sub" style="margin-top:8px;">Virality and recall need local critical mass &#8212; &#8377;50L spread across the whole Hindi belt buys invisibility. Region order is validated against live enquiry data in the first 90 days.</p>
+        <h4>Priority Hindi-speaking regions &#8212; and why</h4>
+        <p><strong>Concentrate, don't spread.</strong> Virality needs local critical mass &#8212; word-of-mouth compounds when a region hits real frequency, and dilutes to nothing spread thin across the whole Hindi belt.</p>
+        <p class="sub" style="margin-top:8px;"><strong>Two audiences, so two starting regions:</strong> states with visible aspirational, multi-property wealth creation first, and states with dense, ordinary joint-family household life close behind &#8212; not a single list, a dual one, funded to reach both.</p>
       </div>
       <div class="card">
-        <h4>Audience segments</h4>
-        <p><strong>Premium / Aspirational:</strong> villas, farmhouses, resorts, hotels. <strong>Utility / Considered:</strong> farms, schools, plotted homes, offices.</p>
-        <p class="sub" style="margin-top:8px;">Trade audience: building-material dealers and distributors in tier-2 towns; architects and contractors as influencers.</p>
+        <h4>Target audience segments</h4>
+        <p><strong>The Self-Made Owner</strong> &#8212; built like "Pandey": 40, worked hard, owns a farm, a villa, and a restaurant he just built. Wealth arrived faster than his sense of belonging to it.</p>
+        <p style="margin-top:6px;"><strong>The Ordinary Householder</strong> &#8212; built like "Shalini": a housewife in a full, joint family, whose one nightly moment of quiet is routinely interrupted.</p>
+        <p class="sub" style="margin-top:6px;"><strong>Why two, not one:</strong> a single wealthy protagonist reaches only aspirational viewers; a single ordinary one reaches only the broadest. Two characters, two mechanisms, the widest possible net.</p>
       </div>
       <div class="card">
-        <h4>User problems &amp; behaviour</h4>
-        <p>The mass desire: <strong>dignified control over what the world sees of your property</strong> &#8212; not privacy alone, not status alone. The felt problem: exposure and incompleteness &#8212; built, but not finished, not fully theirs. Considered purchase, mobile-first research, family and contractor input.</p>
+        <h4>User problems, pain points &amp; behaviour</h4>
+        <p>The desire underneath everything: <strong>dignified control over what the world sees of your life</strong> &#8212; not privacy alone, not status alone. It shows up two ways: ownership without control (you can own three properties and still feel none of them are truly yours), and routine, resigned exposure (a private moment interrupted so often it stops registering as wrong). People don't go looking for a fence &#8212; they carry a low-grade, unnamed discomfort about their property's edges until something names it for them.</p>
       </div>
       <div class="card">
-        <h4>Current defaults &amp; barriers</h4>
-        <p>Brick walls, MS iron grills, bamboo screening, unbranded PVC jaali &#8212; or nothing at all. The barrier: the category doesn't exist in the buyer's mind yet. Every default has a known failure mode, but nobody comparison-shops "fences."</p>
+        <h4>Competing products &amp; barriers to adoption</h4>
+        <p>There isn't a real competitive category here yet &#8212; this market sits at an early stage of sophistication; nobody has made a serious, well-made claim in this space before. The job isn't to out-position anyone. It's to be <strong>the first real voice a category hears.</strong></p>
+        <p class="sub" style="margin-top:8px;"><strong>The barrier:</strong> "needs a contractor" is the default assumption for almost everything in an Indian home &#8212; a fence you install yourself is a genuinely new behaviour to ask for, not just a new product.</p>
       </div>
     </div>
 
     <div class="callout">
-      <span class="lbl">Positioning</span>
-      <p>LATO Fence gives Indian property owners a boundary that adds &#8212; light, shade, privacy, design &#8212; instead of one that just encloses. Backed by Indonet's ISO-certified manufacturing discipline.</p>
+      <span class="lbl">Product positioning</span>
+      <p>LatoFence gives property owners control over their own space &#8212; the ability to define, on their own terms, what the world sees of their life. Fully self-installed: no contractor, no wait.</p>
     </div>
 
     <div class="grid four">
-      <div class="card"><h4>A Boundary That Adds</h4><p class="sub">Not what it keeps out &#8212; what it gives back.</p></div>
-      <div class="card"><h4>Proof You Can Trust</h4><p class="sub">ISO 9001:2015 &#183; three plants &#183; six group companies &#183; exports to five countries.</p></div>
-      <div class="card"><h4>Built for Every Season</h4><p class="sub">UV-stabilized, weather-resistant, monsoon-tested.</p></div>
-      <div class="card"><h4>No One Else Needed</h4><p class="sub">Fully DIY &#8212; order, install, done. No contractor.</p></div>
+      <div class="card"><h4>Control, Not Just Coverage</h4><p class="sub">The desire underneath everything: dignified control over what the world sees of your life.</p></div>
+      <div class="card"><h4>Built to Install Yourself</h4><p class="sub">No competitor in this early-stage category can say this. Framed as pride, not hassle.</p></div>
+      <div class="card"><h4>Elevated, Not Elite</h4><p class="sub">Aspirational enough to want, grounded enough to trust &#8212; self-made, not inherited wealth.</p></div>
+      <div class="card"><h4>Every Property, Not Just the Garden</h4><p class="sub">Home, farm, restaurant &#8212; the same ache travels everywhere, for both audiences.</p></div>
     </div>
 
-    <h3>The headline stack &#8212; one line per stage of awareness</h3>
-    <p class="lede">Every asset in this submission executes one of these five lines. Full development log &#8212; every variation tested, scored, and why each won or lost &#8212; in the appendix.</p>
+    <h3>Brand tone of voice</h3>
+    <p><strong>Say it like this:</strong> <em>"Control your space with LatoFence."</em> &#8212; plain, direct, no jargon. This category has heard almost no serious claims yet, so an honest, unadorned line outperforms a clever one.<br>
+    <strong>Never like this:</strong> <em>"Our advanced polymer technology delivers unparalleled performance."</em> &#8212; no comparison-heavy or over-engineered claims are needed yet.</p>
+
+    <h3>Content buckets &#8212; what the brand should say, show, repeat, and own</h3>
+    <div class="grid four">
+      <div class="card" style="background: var(--card-2);"><h4>Say</h4><p class="sub">One sentence, matched to how aware the viewer already is &#8212; never the same claim at every stage. A cold viewer hears identification. A warm one hears proof.</p></div>
+      <div class="card" style="background: var(--card-2);"><h4>Show</h4><p class="sub">Two recurring characters, not stock footage &#8212; a self-made multi-property owner and an ordinary householder, each carrying the same ache in a different register.</p></div>
+      <div class="card" style="background: var(--card-2);"><h4>Repeat</h4><p class="sub">"Space" and "control", threaded through every stage &#8212; from "do you own the property but not the space?" to "control your space with LatoFence" &#8212; so a viewer who sees more than one asset feels continuity, not repetition.</p></div>
+      <div class="card" style="background: var(--card-2);"><h4>Own</h4><p class="sub">Being the first serious, honest voice in a category that has never had one &#8212; plain claims, no comparison, no invented sophistication it hasn't earned yet.</p></div>
+    </div>
+
+    <h3>The headline stack &#8212; the core of this strategy</h3>
+    <p class="lede">One line per stage of awareness, locked through iteration. Every headline was scored, challenged, and re-derived &#8212; several rewritten after direct evidence-based correction rather than picked on the first attempt. That process is the actual strategic work behind this submission; the full logs are in the appendix.</p>
     <div class="stack">
       <div class="stage"><span class="who">SOA5<small>Nebulous / Unaware</small></span><span class="line">Do you own the property but not the space?</span></div>
       <div class="stage"><span class="who">SOA4<small>Itch / Problem-Aware</small></span><span class="line">Carve your private space. Anywhere.</span></div>
       <div class="stage"><span class="who">SOA3<small>Hope / Solution-Aware</small></span><span class="line">Control your space with LatoFence.</span></div>
-      <div class="stage"><span class="who">SOA2<small>Sold / Product-Aware</small></span><span class="line">Every LatoFence panel carries Indonet's ISO-certified manufacturing discipline.</span></div>
+      <div class="stage"><span class="who">SOA2<small>Sold / Product-Aware</small></span><span class="line">Every LatoFence panel carries 18 years of Indonet's manufacturing discipline.</span></div>
       <div class="stage"><span class="who">SOA1<small>Trigger / Most-Aware</small></span><span class="line" style="font-style:italic; font-weight:400;">Held open by design &#8212; offer copy locks the day price and guarantee terms do.<em>The easiest line in the stack, and the only one that shouldn't exist yet.</em></span></div>
     </div>
   </section>
@@ -242,67 +261,133 @@
   <!-- ================= SECTION 2 ================= -->
   <section id="s2">
     <span class="kicker">Section 2 &#183; D2C Website / E-commerce Communication</span>
-    <h2>One Page, Built for SOA2 &#8212; Shown Live Below</h2>
+    <h2>One Page, Built for One Reader &#8212; Shown Live Below</h2>
 
     <div class="grid two">
       <div class="card">
-        <h4>Structure (SB7 framework &#8212; all seven parts, mapped to the page)</h4>
-        <p><strong>1 &#183; A character</strong> &#8212; the owner who wants control of their space.<br>
-        <strong>2 &#183; Has a problem</strong> &#8212; exposure, and defaults that cost money, labour and weeks.<br>
-        <strong>3 &#183; Meets a guide</strong> &#8212; Indonet: ISO 9001:2015, three plants &#8212; proof, not paragraphs.<br>
-        <strong>4 &#183; Who gives them a plan</strong> &#8212; three steps: Choose, Order, Install.<br>
-        <strong>5 &#183; And calls them to action</strong> &#8212; Order Now + Book Now + "Try It First" sample panel.<br>
-        <strong>6 &#183; That helps them avoid failure</strong> &#8212; one struck-through line: what staying with brick, iron or bamboo keeps costing.<br>
-        <strong>7 &#183; And ends in success</strong> &#8212; the space, finally theirs: light in, eyes out, done in a weekend.</p>
+        <h4>What the first fold should communicate</h4>
+        <p>The hero states the character's desire directly &#8212; <strong>"Control your space"</strong> &#8212; plus the DIY promise, plus the CTAs: a direct "Order Now", a softer "Try It First" sample-panel offer for a first-time buyer, and "Call Us" for the buyer who wants a human voice before self-installing.</p>
       </div>
       <div class="card">
-        <h4>Why SOA2, not every visitor</h4>
-        <p>SOA5/SOA4 ads deliberately carry no site link &#8212; engagement only. Only SOA3/2/1 content and Search carry a "visit site" CTA. That's a media-buying decision, not an assumption &#8212; it's what makes designing this page for a warm, trust-seeking SOA2 visitor the right call.</p>
-        <p class="sub" style="margin-top:8px;"><strong>Minimalism rule:</strong> no 101-level explanation of what a fence is. This visitor already knows LatoFence exists &#8212; the page's only job is to remove the last doubt and get the click.</p>
+        <h4>What builds trust &#8212; and the minimalism rule</h4>
+        <p>The site is built for one specific reader &#8212; someone already aware of the brand, seeking final conviction &#8212; not a stranger who's never heard of it. Trust is emphasized around <strong>proof, not introduction.</strong></p>
+        <p class="sub" style="margin-top:8px;">No 101-level explanation of what a fence is. The visitor already knows LatoFence exists &#8212; the page's only job is to remove the last doubt and get the click.</p>
+      </div>
+      <div class="card">
+        <h4>Product benefits and proof points</h4>
+        <p>Bare, factual proof &#8212; <strong>18 years, ISO 9001:2015, manufacturing units</strong> &#8212; shown as numbers, not paragraphs. The same "honest, not clever" rule as every headline.</p>
+      </div>
+      <div class="card">
+        <h4>Objection-handling communication</h4>
+        <p><strong>"Can I actually install this myself?"</strong> &#8212; the single biggest objection this category has never had to answer before. Addressed head-on with the three-step Plan section, not buried.</p>
+        <p class="sub" style="margin-top:8px;"><strong>"I've never heard of this brand."</strong> &#8212; answered with the plain proof numbers, not persuasion copy.</p>
+      </div>
+      <div class="card">
+        <h4>CTA strategy &amp; offer</h4>
+        <p><strong>"Order Now"</strong> (direct) + <strong>"Try It First"</strong> (transitional) &#8212; a named sample-panel program: a first-time self-install buyer needs a low-risk way to test fit and confidence before committing to a full property. DIY-confirmed, so language leans toward ordering, not requesting a quote.</p>
+      </div>
+      <div class="card">
+        <h4>Page flow &#8212; credibility and conversion together</h4>
+        <p>Hero (desire + CTA) &#8594; Stakes (plain, struck-through defaults) &#8594; Proof (bare numbers) &#8594; Plan (3 steps, install included) &#8594; Final CTA repeated once, nothing new introduced. Proof and the CTA share the same fold &#8212; trust and the ask are never more than one scroll apart. Tone: plain, honest, unadorned.</p>
       </div>
     </div>
 
     <div class="browser">
       <div class="chrome"><i></i><i></i><i></i><span>latofence.in &#8212; first fold</span></div>
       <div class="fold">
-        <div class="brand"><b>LatoFence</b><u>ORDER NOW</u></div>
-        <div class="eyebrow">BY INDONET</div>
-        <h1>Control your space.</h1>
-        <p>No contractor. No wait. Order your panels, install them yourself, and it's done &#8212; this weekend.</p>
-        <div class="ctas"><span class="cta">ORDER NOW</span><span class="ctab">BOOK NOW</span><span class="cta2">GET A SAMPLE PANEL FIRST</span></div>
-        <div class="trust">ISO 9001:2015 &nbsp;&#183;&nbsp; MADE IN INDIA BY INDONET &nbsp;&#183;&nbsp; UV-STABILIZED &nbsp;&#183;&nbsp; TERMITE &amp; RUST PROOF &nbsp;&#183;&nbsp; DIY CLICK-FIT</div>
+        <svg class="fold-bg" viewBox="0 0 900 420" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="villasky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#F7DCA8"/><stop offset="1" stop-color="#EDB77A"/>
+            </linearGradient>
+            <pattern id="lat3" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45 0 0)">
+              <rect width="26" height="26" fill="#B85431"/>
+              <rect x="3.5" y="3.5" width="19" height="19" fill="#EDB77A"/>
+            </pattern>
+          </defs>
+          <rect width="900" height="420" fill="url(#villasky)"/>
+          <circle cx="620" cy="86" r="46" fill="#F5C64F" opacity=".9"/>
+          <rect y="284" width="900" height="26" fill="#2F6B24"/>
+          <g>
+            <rect x="470" y="150" width="250" height="140" fill="#FBF6EE"/>
+            <rect x="470" y="150" width="250" height="8" fill="#8A5B33"/>
+            <rect x="514" y="92" width="160" height="58" fill="#F3ECDF"/>
+            <rect x="514" y="92" width="160" height="7" fill="#8A5B33"/>
+            <rect x="492" y="176" width="42" height="52" fill="#F5C64F"/>
+            <rect x="552" y="176" width="42" height="52" fill="#F5C64F"/>
+            <rect x="646" y="176" width="52" height="114" fill="#E8D9BF"/>
+            <rect x="656" y="188" width="32" height="80" fill="#7A4A21"/>
+            <rect x="540" y="106" width="30" height="30" fill="#F5C64F"/>
+            <rect x="606" y="106" width="30" height="30" fill="#F5C64F"/>
+          </g>
+          <g>
+            <rect x="782" y="160" width="10" height="130" fill="#6B4423" rx="4"/>
+            <ellipse cx="787" cy="140" rx="52" ry="16" fill="#2F6B24" transform="rotate(-18 787 140)"/>
+            <ellipse cx="787" cy="140" rx="52" ry="16" fill="#3E7D33" transform="rotate(22 787 140)"/>
+            <ellipse cx="787" cy="128" rx="40" ry="13" fill="#4C8A3F" transform="rotate(2 787 128)"/>
+          </g>
+          <rect y="310" width="900" height="110" fill="#3E7D33"/>
+          <g>
+            <rect x="420" y="268" width="112" height="74" fill="url(#lat3)"/>
+            <rect x="540" y="268" width="112" height="74" fill="url(#lat3)"/>
+            <rect x="660" y="268" width="112" height="74" fill="url(#lat3)"/>
+            <rect x="780" y="268" width="112" height="74" fill="url(#lat3)"/>
+            <rect x="414" y="262" width="486" height="7" fill="#8A3D20"/>
+            <rect x="414" y="342" width="486" height="7" fill="#8A3D20"/>
+            <rect x="414" y="262" width="7" height="87" fill="#8A3D20"/>
+            <rect x="533" y="262" width="7" height="87" fill="#8A3D20"/>
+            <rect x="653" y="262" width="7" height="87" fill="#8A3D20"/>
+            <rect x="773" y="262" width="7" height="87" fill="#8A3D20"/>
+            <rect x="893" y="262" width="7" height="87" fill="#8A3D20"/>
+          </g>
+        </svg>
+        <div class="fold-shade"></div>
+        <div class="fold-in">
+          <div class="brand"><b>LatoFence</b><u>ORDER NOW</u></div>
+          <div class="eyebrow">BY INDONET</div>
+          <h1>Control your space.</h1>
+          <p>No contractor. No wait. Order your panels, install, and it's done &#8212; this weekend.</p>
+          <div class="ctas"><span class="cta">ORDER NOW</span><span class="ctab">CALL US</span><span class="cta2">TRY IT FIRST &#8212; GET A SAMPLE PANEL</span></div>
+          <div class="trust">18 YEARS &nbsp;&#183;&nbsp; ISO 9001:2015 &nbsp;&#183;&nbsp; MADE IN INDIA BY INDONET &nbsp;&#183;&nbsp; UV-STABILIZED &nbsp;&#183;&nbsp; TERMITE &amp; RUST PROOF &nbsp;&#183;&nbsp; DIY CLICK-FIT</div>
+        </div>
       </div>
     </div>
-    <p class="figcap">The first fold, rendered live to the SB7 structure above. Palette aligns to final brand guidelines at build.</p>
+    <p class="figcap">The first fold, rendered live to the structure above &#8212; the desire stated over the product in its habitat, proof one glance away, three CTAs by commitment level.</p>
   </section>
 
   <!-- ================= SECTION 3 ================= -->
   <section id="s3">
     <span class="kicker">Section 3 &#183; Distribution Strategy for 3 DVCs</span>
-    <h2>Channel Map, Budget Split &amp; Campaign Phasing</h2>
+    <h2>Budget, Regions, Phases &#8212; and Which Film Runs Where</h2>
 
     <div class="tblwrap"><table>
-      <tr><th>Channel</th><th>Region priority</th><th>DVC / moment</th></tr>
-      <tr><td>Instagram / Facebook</td><td>All active states</td><td>DVC 2 (neighbour comedy) &#8212; shares travel; DVC 3 (festive film) joins in Q4</td></tr>
-      <tr><td>YouTube</td><td>Tier 1 + Tier 2</td><td>DVC 1 (manifesto film) + product-demo cutdowns &#8212; lean-back attention</td></tr>
-      <tr><td>Radio</td><td>All active states</td><td>DVC 2 audio adaptation &#8212; dialogue comedy survives audio-only</td></tr>
-      <tr><td>Theatre</td><td>Tier 1 launch, then Tier 2</td><td>DVC 1 at launch; DVC 3 in the festive window &#8212; captive single exposure</td></tr>
+      <tr><th>Channel</th><th>Budget split</th><th>Rationale</th></tr>
+      <tr><td>Instagram / Facebook</td><td class="score">40%</td><td>Organic reach can't be forced the way paid targeting can &#8212; a new handle earns reach purely on hook strength. This is where both recurring characters (self-made owner, ordinary householder) run, across every stage of awareness.</td></tr>
+      <tr><td>Radio</td><td class="score">25%</td><td>No visual, so the headline has to carry the whole cold-open alone. Reaches the ordinary-householder audience where a screen-based platform may not.</td></tr>
+      <tr><td>YouTube</td><td class="score">20%</td><td>Longer-form room for the same films where a viewer has slightly more patience than a Reels scroll allows.</td></tr>
+      <tr><td>Theatre</td><td class="score">15%</td><td>The most patience of any format &#8212; captive audience, no skip button &#8212; so the headline can arrive as a punchline after a slower visual build, not an opener.</td></tr>
     </table></div>
+    <p><strong>Region prioritisation:</strong> concentrated, not spread thin &#8212; the &#8377;50L budget funds the highest-density regions for each of the two audiences first and deepest, rather than a uniform layer across the whole Hindi belt. Virality and dealer credibility both need local critical mass to compound; spread thin, neither happens.</p>
 
-    <p><strong>Region rollout:</strong> Tier 1 (UP, Rajasthan) funded first and deepest &#8212; concentration builds the local density that virality and dealer credibility both need. Tier 2 (Haryana) joins once Tier 1 has a full quarter of density. Tier 3 joins last, smaller. Film titles are working names read from the published campaign; mapping confirms against the final cuts.</p>
+    <div class="grid three">
+      <div class="card" style="background: var(--card-2);"><h4>Phase 1 &#183; Cold reach</h4><p class="sub">Launch, both characters introduced, identification-only &#8212; highest-density regions for each audience.</p></div>
+      <div class="card" style="background: var(--card-2);"><h4>Phase 2 &#183; Problem + solution</h4><p class="sub">Retarget engaged viewers with the ache, then the brand as the answer &#8212; same regions, deepened.</p></div>
+      <div class="card" style="background: var(--card-2);"><h4>Phase 3 &#183; Proof + trigger</h4><p class="sub">Warm audiences only &#8212; trust content, then the offer &#8212; the only phase carrying a real CTA.</p></div>
+    </div>
 
-    <div class="tblwrap"><table>
-      <tr><th>Scenario</th><th>Meta</th><th>YouTube</th><th>Radio</th><th>Theatre</th><th>Other (Search / LinkedIn / IndiaMART / WhatsApp)</th></tr>
-      <tr><td><strong>A</strong> &#8212; DVC-only, 4 channels</td><td class="score">32%</td><td class="score">12%</td><td class="score">19%</td><td class="score">9%</td><td class="score">&#8212;</td></tr>
-      <tr><td><strong>B</strong> &#8212; Whole comms</td><td class="score">32%</td><td class="score">12%</td><td class="score">19%</td><td class="score">9%</td><td class="score">28%</td></tr>
-    </table></div>
-    <p class="lede">Scenario A funds the four named channels alone; Scenario B stretches the same &#8377;50L to search and trade. Dealer collateral: reused SOA2 proof content distributes directly &#8212; WhatsApp Business to the dealer list &#8212; never posted to the public consumer grid.</p>
-
-    <div class="grid four">
-      <div class="card"><h4>Q1 &#183; New Beginnings</h4><p class="sub">Tier 1 launch + national digital always-on</p></div>
-      <div class="card"><h4>Q2 &#183; Pre-Monsoon</h4><p class="sub">Tier 1 maintained + Tier 2 (Haryana) launches</p></div>
-      <div class="card"><h4>Q3 &#183; Built for Weather</h4><p class="sub">Tier 1+2 maintained, durability proof content</p></div>
-      <div class="card"><h4>Q4 &#183; Complete the Home</h4><p class="sub">Tier 3 launches + festive national push</p></div>
+    <div class="grid two" style="margin-top:14px;">
+      <div class="card">
+        <h4>Which DVC runs where</h4>
+        <p>Emotion-led films run where people scroll for identification, not research &#8212; Meta, Radio, Theatre. Longer-form, proof-led material runs where a viewer has already chosen to spend more attention &#8212; YouTube and the website. Of the three films published on @lato_fence: the manifesto film and the neighbour-comedy carry identification on Meta, Radio and Theatre; the festive family film joins in the festive window; product-proof cutdowns hold YouTube.</p>
+      </div>
+      <div class="card">
+        <h4>How the films adapt per platform</h4>
+        <p>The headline moves position by format &#8212; burned-in on-screen for muted Reels viewing, spoken after a visual beat on YouTube, carrying the entire cold-open alone on Radio, arriving as a delayed punchline in Theatre.</p>
+      </div>
+      <div class="card" style="grid-column: 1 / -1;">
+        <h4>One asset, two objectives &#8212; consumer awareness and distributor interest</h4>
+        <p>The same proof content built for consumers (manufacturing discipline, install ease) is reused directly with dealers &#8212; sent via WhatsApp to a maintained dealer list, never posted to the public consumer grid &#8212; so one asset serves both objectives without diluting either.</p>
+      </div>
     </div>
   </section>
 
@@ -311,7 +396,7 @@
     <span class="kicker">Section 4 &#183; One-Month Social Media Calendar</span>
     <h2>Every Reel Opens on a Locked Headline</h2>
 
-    <p>The month's real work happened one level up: five locked headlines, one per stage of awareness. Once those exist, a reel is translation, not invention &#8212; every concept below opens on its stage's locked line or dramatizes its exact essence. So the craft went where craft is scarcest. <strong>SOA5 &#8212; cold reach, by common consent the hardest brief in advertising &#8212; is delivered complete:</strong> two finished films, two deliberately different registers, all nine fields the brief asks for. At the other end, SOA1 is the easiest line in the stack and the only one that cannot responsibly exist yet: it is offer copy, and it locks the day price and guarantee terms do. Everything in between is production against a locked sentence &#8212; scheduled, not stuck.</p>
+    <p>The month's real work happened one level up: five locked headlines, one per stage of awareness. Once those exist, a reel is translation, not invention &#8212; every concept below opens on its stage's locked line or dramatizes its exact essence. So the craft went where craft is scarcest. <strong>SOA5 &#8212; cold reach, by common consent the hardest brief in advertising &#8212; is delivered complete:</strong> two finished films, two deliberately different registers, all nine fields the brief asks for. At the other end, SOA1 is the easiest line in the stack and the only one that cannot responsibly exist yet: it is offer copy, and it locks the day price and guarantee terms do. The remaining reels needed to reach the brief's 12&#8211;15 follow the same process &#8212; locked headline first, script second. Scheduled, not stuck.</p>
 
     <div class="reel">
       <h4>Reel 1 &#183; "Pandey" &#8212; Ownership Without Belonging</h4>
@@ -321,7 +406,7 @@
       <div class="field"><b>Script / flow</b>0&#8211;5s farm, VO per version. 5&#8211;9s villa &#8212; "This is his villa. His family's farm. The restaurant he just built." 9&#8211;13s restaurant &#8212; "He owns them all" &#8212; face shifts from content to unreadable. 13&#8211;15s hold on face &#8212; "Just not the space." 15&#8211;16s cut to black, headline card.</div>
       <div class="field"><b>Caption direction</b>Burned-in, matching VO verbatim &#8212; most Reels viewers watch muted.</div>
       <div class="field"><b>Why it can work</b>A named, aged character reads as documentary, not advertising. Version B's line offers zero explanation for itself, letting the audience supply their own reaction &#8212; a sharper contrast against the sincere turn in beats 3&#8211;4.</div>
-      <div class="field"><b>Target audience</b>Broad cold reach, skewing Premium/Aspirational by construction &#8212; an open, named trade-off, not an oversight.</div>
+      <div class="field"><b>Target audience</b>The self-made owner segment &#8212; broad cold reach, skewing aspirational by construction, an open trade-off.</div>
       <div class="field"><b>Format / funnel job</b>15&#8211;16s vertical Reel, voiceover-led, mandatory captions. Awareness only (SOA5) &#8212; zero CTA in-reel; the path to purchase is the always-open bio link, never referenced on-screen.</div>
       <div class="field"><b>Influencer / collab</b>None cast &#8212; "Pandey" originates as a recurring, unknown-actor brand character for reuse across later reels.</div>
     </div>
@@ -334,16 +419,9 @@
       <div class="field"><b>Script / flow</b>0&#8211;3s full household. 3&#8211;5s cut to her outside, pacing, lips moving in silent chant. 5&#8211;8s a passerby appears at the boundary gap &#8212; she stops, forces a polite nod, waits, resumes. 8&#8211;11s it happens again &#8212; her reaction faster, automatic. 11&#8211;13s pacing continues; the sameness is the point. 13&#8211;14s cut to black, headline card.</div>
       <div class="field"><b>Caption direction</b>None &#8212; fully wordless except the closing headline card.</div>
       <div class="field"><b>Why it can work</b>The most mechanically direct problem-solution fit of any concept tested &#8212; an open boundary literally causes the exact thing shown. Repetition proves it's routine. Reaches joint-family households, a segment no other reel covers.</div>
-      <div class="field"><b>Target audience</b>Broadest and most cross-segment of any SOA5 concept &#8212; no wealth or career signalling required.</div>
+      <div class="field"><b>Target audience</b>The ordinary householder segment &#8212; broadest and most cross-segment of any concept, no wealth or career signalling required.</div>
       <div class="field"><b>Format / funnel job</b>13&#8211;14s vertical Reel, sound-design led, fully wordless. Awareness only (SOA5), zero CTA in-reel, same bio-link-only rule.</div>
       <div class="field"><b>Influencer / collab</b>None &#8212; new unknown-actor character, separate continuity from Pandey.</div>
-    </div>
-
-    <h3>Reels 3&#8211;5 &#8212; in progress, same process as Reels 1&#8211;2</h3>
-    <div class="grid two">
-      <div class="card"><h4>Reel 3 &#8212; SOA4</h4><p><em>"Carve your private space. Anywhere."</em></p><p class="sub" style="margin-top:6px;">A private moment quietly interrupted by exposure at the property's edge &#8212; problem named, no brand, no solution shown.</p></div>
-      <div class="card"><h4>Reel 4 &#8212; SOA3</h4><p><em>"Control your space with LatoFence."</em></p><p class="sub" style="margin-top:6px;">A before/after reveal &#8212; the exact moment an exposed edge becomes controlled; brand introduced as the answer, no proof-stacking yet.</p></div>
-      <div class="card" style="grid-column: 1 / -1;"><h4>Reel 5 &#8212; SOA2</h4><p><em>"Every LatoFence panel carries Indonet's ISO-certified manufacturing discipline."</em></p><p class="sub" style="margin-top:6px;">Tangible proof &#8212; material close-ups, certification, install quality &#8212; for a retargeted, already brand-aware viewer only.</p></div>
     </div>
   </section>
 
@@ -476,11 +554,6 @@
           <rect x="448" y="156" width="6" height="64" fill="#8A3D20"/>
           <rect x="522" y="156" width="6" height="64" fill="#8A3D20"/>
         </g>
-        <g>
-          <rect x="72" y="238" width="46" height="34" rx="4" fill="#B85431"/>
-          <rect x="78" y="230" width="34" height="8" rx="2" fill="#8A3D20"/>
-          <text x="95" y="262" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#FBF6EE" text-anchor="middle">LATO</text>
-        </g>
       </svg>
       <div class="li-stats"><span>&#128077;&#10084;&#65039;&#128161; 187</span><span>41 comments &#183; 12 reposts</span></div>
       <div class="li-actions"><span>&#128077; Like</span><span>&#128172; Comment</span><span>&#128257; Repost</span><span>&#10148; Send</span></div>
@@ -491,27 +564,18 @@
   <!-- ================= SUMMARY ================= -->
   <section id="summary">
     <span class="kicker">In Summary</span>
-    <h2>Five Sentences. One Idea. Every Channel.</h2>
+    <h2>Two People. Five Sentences. One Desire.</h2>
     <div class="grid two">
-      <div class="card"><h4>Direct answers</h4><p class="sub">Every brief question answered plainly, in the order it was asked.</p></div>
-      <div class="card"><h4>The reasoning</h4><p class="sub">Every piece of logic, every headline variation, every assumption stated plainly &#8212; appendix, same order.</p></div>
-      <div class="card" style="grid-column: 1 / -1;"><h4>Two open inputs</h4><p class="sub">SOA1 is offer copy &#8212; it locks the day price and guarantee terms are confirmed. The remaining reels are production against locked headlines: scheduled, not stuck.</p></div>
+      <div class="card"><h4>The desire</h4><p class="sub">Dignified control over what the world sees of your life &#8212; the thread running through every headline, every reel, every post.</p></div>
+      <div class="card"><h4>The method</h4><p class="sub">Five headlines, tested and re-derived against real evidence, not picked once and left alone.</p></div>
+      <div class="card" style="grid-column: 1 / -1;"><h4>The honest gaps</h4><p class="sub">SOA1 needs price and offer terms. The founder's real name and the 18-year claim both need confirming before anything goes live.</p></div>
     </div>
   </section>
 
   <!-- ================= APPENDIX ================= -->
   <section id="appendix">
     <span class="kicker">Appendix &#183; The Reasoning</span>
-    <h2>The Frame, the Desire, and Why the Headlines Got the Hours</h2>
-
-    <div class="grid two">
-      <div class="card"><h4>One frame, not three campaigns</h4><p class="sub">Awareness, distribution, D2C sales are three levers toward one objective: profit. Awareness dominates &#8212; dealers won't back an unknown brand, cold traffic won't convert without trust.</p></div>
-      <div class="card"><h4>Concentrate, not spread</h4><p class="sub">Virality needs local critical mass. &#8377;50L spread across the whole Hindi belt falls below the frequency needed to build recall in a category nobody's searching for yet.</p></div>
-      <div class="card"><h4>The mass desire</h4><p class="sub">Privacy and sophistication looked like competing themes. They're one desire: dignified control over what the world sees of your life &#8212; the promise already latent in the brand's own line, fences that secure spaces without closing them in.</p></div>
-      <div class="card"><h4>Sophistication stays flat, specificity rises</h4><p class="sub">This is the first serious voice in the category, so every headline stays plain, not clever, at every stage. What changes stage-to-stage is proof density, not boldness.</p></div>
-      <div class="card"><h4>What comparable brands taught us</h4><p class="sub">Asian Paints validates desire-led over feature-led positioning for this category. IKEA's ownership-effect research is why DIY gets framed as pride, not hassle. Offered as pattern-level direction, not case data.</p></div>
-      <div class="card"><h4>DIY as pride, built into the funnel</h4><p class="sub">SOA4 names the ache, not the fix. SOA3 introduces DIY as a feature, not a caveat. SOA2 proves it via real installer UGC. SOA1's close reframes action as reward, not a bare transaction.</p></div>
-    </div>
+    <h2>Why the Headlines Got the Hours &#8212; and How Each Was Derived</h2>
 
     <div class="callout">
       <span class="lbl">Why the headlines got the hours</span>
@@ -556,28 +620,19 @@
       <tr><td>18 years of excellence / elegance and intelligence</td><td class="score">5&#8211;5.5</td><td>Vague trust-claim / 'intelligence' overreaches what a fence can credibly signal.</td></tr>
       <tr><td>Sophisticated properties... unki hadd, LATO Fence se bani</td><td class="score">8 &#8594; 4</td><td>Best-scoring line on craft &#8212; but withdrawn: asserts LATO already IS the common denominator, a false claim given brand-awareness is objective #1.</td></tr>
       <tr><td>We crafted the Latofence experience after 18 years of iteration: Indonet</td><td class="score">7</td><td>Fixed the false-fame trap; colon-then-brand still reads as a stapled-on byline.</td></tr>
-      <tr class="locked"><td>Every LatoFence panel carries Indonet's ISO-certified manufacturing discipline &#8212; LOCKED</td><td class="score">8</td><td>Concrete, product-level claim; drops the byline construction; best-built SOA2 line in the set.</td></tr>
+      <tr class="locked"><td>Every LatoFence panel carries 18 years of Indonet's manufacturing discipline &#8212; LOCKED</td><td class="score">8</td><td>Concrete, product-level claim; drops the byline construction; best-built SOA2 line in the set.</td></tr>
     </table></div>
 
-    <h3>Website, distribution &amp; budget &#8212; fully auditable</h3>
-    <div class="grid two">
-      <div class="card"><h4>The DIY cascade</h4><p class="sub">Confirming full DIY changed the website's CTAs, justified the "Try It First" sample-panel program, and added an objection row: "Can I install this myself?"</p></div>
-      <div class="card"><h4>One reader, not every visitor</h4><p class="sub">SOA5/4 ads carry no site link by design &#8212; a deliberate media-buying rule, not an assumption. That's what justifies one focused page for a warm SOA2 reader.</p></div>
-      <div class="card"><h4>Why two budget scenarios</h4><p class="sub">The brief's &#8377;50L sits directly under the 4-channel DVC ask &#8212; literally read, that's Scenario A. Scenario B extends the same &#8377;50L to Search/LinkedIn/IndiaMART/WhatsApp. Both built out rather than guessing which was meant.</p></div>
-      <div class="card"><h4>How the math works</h4><p class="sub">Every rupee = Total &#215; State % &#215; Channel % &#215; SOA % &#8212; verified to reconcile to exactly &#8377;50,00,000 by tier, state, channel, and SOA stage.</p></div>
-      <div class="card"><h4>Dealer collateral, corrected</h4><p class="sub">Reused SOA2 proof content distributes directly &#8212; WhatsApp Business to the dealer list, or a dealer resources link &#8212; never posted to the public consumer grid. One owned exception: a bio Highlight for organic dealer discovery.</p></div>
-      <div class="card"><h4>Built to be trued</h4><p class="sub">Every split is directional by design &#8212; built on channel economics, and structured so real rate cards and first-quarter delivery data replace planning numbers without breaking the model.</p></div>
-    </div>
-
-    <h3>Working assumptions &#8212; stated once, cleanly, as the brief asks</h3>
+    <h3>Assumptions made &#8212; stated clearly, as the brief requests</h3>
     <div class="tblwrap"><table>
-      <tr><th>Assumption</th><th>Where it operates</th><th>How it resolves</th></tr>
-      <tr><td>Sample-panel offer &amp; pricing</td><td>SOA1 headline &#183; website CTA</td><td>Final copy locks on confirmed price, guarantee and offer terms</td></tr>
-      <tr><td>Media splits &amp; state weights</td><td>Budget scenarios &#183; phasing</td><td>Directional by design &#8212; trued against rate cards and first-quarter delivery data</td></tr>
-      <tr><td>Comparable-brand reasoning (Asian Paints, IKEA)</td><td>Appendix</td><td>Pattern-level direction, not case data</td></tr>
-      <tr><td>Reels 3&#8211;5 concepts &#183; reels 6&#8211;15</td><td>Section 4</td><td>Concept-stage / scheduled &#8212; same locked-headline process as the two finished films</td></tr>
-      <tr><td>Founder posts</td><td>Section 5</td><td>Written in the founder's voice; published only after his sign-off</td></tr>
-      <tr><td>Region prioritisation</td><td>Sections 1 &amp; 3</td><td>Category-logic-led; validated against first-90-day enquiry data</td></tr>
+      <tr><th>Assumption</th><th>Basis</th></tr>
+      <tr><td>LatoFence is fully self-install, no installation crew</td><td>Confirmed directly during this process &#8212; DIY is treated as a real, differentiated, pride-worthy claim throughout</td></tr>
+      <tr><td>The category has no established competitors yet</td><td>Treated as an early-sophistication market &#8212; messaging stays plain and honest rather than comparative by design</td></tr>
+      <tr><td>Two audience archetypes (self-made owner, ordinary householder) anchor targeting, regions, and casting</td><td>Built to cast the widest identification net with the fewest characters, and reused consistently across regions, reels, and segments</td></tr>
+      <tr><td>"18 years / ISO 9001:2015 / manufacturing units" are real, factual claims</td><td>Not independently verified &#8212; confirm before these appear in any live asset</td></tr>
+      <tr><td>A named, real founder exists and is available to be ghostwritten for</td><td>Not confirmed &#8212; the posts are drafts in the founder's voice, published only after his sign-off</td></tr>
+      <tr><td>Specific priority states, exact budget split percentages, and media rate-card figures</td><td>Directional &#8212; built on category logic and channel reasoning, not real Hindi-belt rate cards, which weren't available to verify against</td></tr>
+      <tr><td>SOA1 (the final trigger-stage headline)</td><td>Not drafted &#8212; depends on price, guarantee, and offer terms not yet authorised</td></tr>
     </table></div>
   </section>
 
