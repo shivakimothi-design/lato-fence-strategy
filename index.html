@@ -151,11 +151,22 @@
   .field b { display: block; font-size: 11px; letter-spacing: .12em; color: var(--accent); text-transform: uppercase; margin-bottom: 2px; }
 
   /* ---------- linkedin post ---------- */
-  .post { background: var(--card); border-radius: 12px; padding: 26px 30px; margin: 18px 0; max-width: 640px; }
-  .post .byline { font-weight: 700; color: var(--navy); font-size: 14px; margin-bottom: 2px; }
-  .post .role { font-size: 12.5px; color: var(--ink-2); margin-bottom: 16px; }
-  .post p { font-size: 15px; margin: 0 0 14px; }
-  .post p:last-child { margin-bottom: 0; }
+  /* ---------- linkedin-style post cards ---------- */
+  .li-card { background: #FFFFFF; border: 1px solid var(--hairline); border-radius: 10px; margin: 20px 0 34px; max-width: 555px; overflow: hidden; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
+  :root[data-theme="dark"] .li-card { background: #1B242F; }
+  @media (prefers-color-scheme: dark) { .li-card { background: #1B242F; } }
+  .li-head { display: flex; gap: 10px; padding: 14px 16px 0; align-items: center; }
+  .li-ava { width: 48px; height: 48px; border-radius: 50%; background: #031440; color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 17px; flex: 0 0 auto; }
+  .li-name { font-weight: 700; font-size: 14px; color: var(--ink); line-height: 1.3; }
+  .li-name span { font-weight: 400; color: var(--ink-2); }
+  .li-sub { font-size: 12px; color: var(--ink-2); line-height: 1.35; }
+  .li-body { padding: 12px 16px 4px; }
+  .li-body p { font-size: 14px; margin: 0 0 12px; max-width: none; }
+  .li-img { display: block; width: 100%; height: auto; margin-top: 4px; }
+  .li-stats { display: flex; justify-content: space-between; font-size: 12px; color: var(--ink-2); padding: 8px 16px; border-bottom: 1px solid var(--hairline); }
+  .li-actions { display: flex; justify-content: space-around; padding: 6px 8px; font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
+  .li-actions span { padding: 8px 10px; }
+  .post-note { font-size: 13px; color: var(--ink-2); font-style: italic; max-width: 555px; margin: -22px 2px 30px; }
 
   .foot { margin-top: 88px; border-top: 1px solid var(--hairline); padding-top: 20px; font-size: 13px; color: var(--ink-2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 </style>
@@ -339,27 +350,142 @@
   <!-- ================= SECTION 5 ================= -->
   <section id="s5">
     <span class="kicker">Section 5 &#183; Founder LinkedIn Ghostwriting</span>
-    <h2>Two Posts, Zero Product-Push</h2>
+    <h2>Two Stories, Zero Product-Push</h2>
+    <p class="lede">Written as stories, not statements &#8212; a first line that stops the scroll, a real scene, a cultural truth, and the brand arriving only where it's earned.</p>
 
-    <div class="post">
-      <div class="byline">Hitendra (H.M.) Panchal</div>
-      <div class="role">Founder &amp; CEO, Indonet Group &#183; Post 1 &#8212; On Boundaries &amp; Trust</div>
-      <p>We started Indonet making protective nets for farms &#8212; simple things that kept crops safe from birds and animals.</p>
-      <p>All these years later, I still think about boundaries the way I did on day one. A good boundary was never about keeping the world out. It was about giving whatever's inside room to actually live.</p>
-      <p>Somewhere along the way, Indian homes started treating boundaries only as walls. Necessary, but not something anyone ever felt good about looking at.</p>
-      <p>A fence can stop at 'private.' Or it can also let in light, hold its colour through a monsoon, and make the person standing behind it a little more at ease.</p>
-      <p>Would love to hear how others think about the spaces they've built &#8212; where did your boundary stop being just a wall?</p>
+    <h3>Post 1 &#8212; Privacy, the way Indian homes have always understood it</h3>
+    <div class="li-card">
+      <div class="li-head">
+        <div class="li-ava">HP</div>
+        <div>
+          <div class="li-name">Hitendra Panchal <span>&#183; 3rd+</span></div>
+          <div class="li-sub">Founder &amp; CEO, Indonet Group<br>2d &#183; Edited</div>
+        </div>
+      </div>
+      <div class="li-body">
+        <p><strong>My mother never sat in our aangan after evening.</strong></p>
+        <p>Not because anyone told her not to. The courtyard was the heart of our house &#8212; chai happened there, homework happened there, winter afternoons happened there.</p>
+        <p>But it had a low brick wall. And after five, the lane outside filled with people walking home.</p>
+        <p>So every evening, without a word, the whole life of that courtyard picked itself up and moved indoors.</p>
+        <p>Nobody called it a privacy problem. It was just how things were.</p>
+        <p>Thirty years later, I caught myself turning the chairs on my own lawn to face away from the gate. Same instinct. Different house.</p>
+        <p>Here's what I've come to believe: Indian homes never wanted isolation. Hawa aur roshni &#8212; air and light &#8212; are non-negotiable for us. What we wanted was control over who sees what. Our grandmothers knew this &#8212; that's exactly what the jaali in old havelis was: privacy that still breathed.</p>
+        <p>Somewhere between the haveli and the apartment, we replaced the jaali with plain walls. And called it progress.</p>
+        <p>That's the thought we kept returning to while designing LATO Fence: can a boundary protect a family's evenings without stealing its light?</p>
+        <p>What did privacy look like in the home you grew up in? I'd love to read the memories.</p>
+      </div>
+      <svg class="li-img" viewBox="0 0 555 300" role="img" aria-label="Illustration: evening courtyard, chai on a stool, light falling through a lattice fence" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="dusk" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#F9E3C0"/><stop offset="1" stop-color="#F3C99A"/>
+          </linearGradient>
+          <pattern id="lat1" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(45 0 0)">
+            <rect width="30" height="30" fill="#27511A"/>
+            <rect x="4" y="4" width="22" height="22" fill="#F3C99A"/>
+          </pattern>
+        </defs>
+        <rect width="555" height="300" fill="url(#dusk)"/>
+        <circle cx="140" cy="118" r="46" fill="#E74623" opacity=".85"/>
+        <rect y="196" width="555" height="104" fill="#3E7D33"/>
+        <rect y="196" width="555" height="8" fill="#2F6B24"/>
+        <g>
+          <rect x="300" y="42" width="230" height="176" fill="url(#lat1)"/>
+          <rect x="296" y="38" width="238" height="8" fill="#1E3F14"/>
+          <rect x="296" y="214" width="238" height="8" fill="#1E3F14"/>
+          <rect x="292" y="38" width="8" height="184" fill="#1E3F14"/>
+          <rect x="530" y="38" width="8" height="184" fill="#1E3F14"/>
+        </g>
+        <g fill="#F9E3C0" opacity=".5">
+          <rect x="330" y="238" width="16" height="16" transform="rotate(45 338 246)"/>
+          <rect x="378" y="252" width="16" height="16" transform="rotate(45 386 260)"/>
+          <rect x="428" y="240" width="16" height="16" transform="rotate(45 436 248)"/>
+          <rect x="474" y="256" width="16" height="16" transform="rotate(45 482 264)"/>
+        </g>
+        <g>
+          <rect x="96" y="232" width="58" height="10" rx="3" fill="#7A4A21"/>
+          <rect x="102" y="242" width="8" height="30" fill="#7A4A21"/>
+          <rect x="140" y="242" width="8" height="30" fill="#7A4A21"/>
+          <path d="M112 214 h26 a3 3 0 0 1 3 3 v12 a8 8 0 0 1 -8 8 h-16 a8 8 0 0 1 -8 -8 v-12 a3 3 0 0 1 3 -3 z" fill="#FBF6EE"/>
+          <path d="M141 220 h6 a6 6 0 0 1 0 14 h-6 z" fill="none" stroke="#FBF6EE" stroke-width="3"/>
+          <path d="M118 206 q3 -6 0 -10 M128 206 q3 -6 0 -10" stroke="#FBF6EE" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".8"/>
+        </g>
+        <g>
+          <rect x="196" y="238" width="34" height="30" rx="4" fill="#B85431"/>
+          <path d="M213 214 q-16 4 -12 22 q10 -2 12 -12 q2 10 12 12 q4 -18 -12 -22 z" fill="#2F6B24"/>
+          <rect x="211" y="228" width="4" height="14" fill="#2F6B24"/>
+        </g>
+      </svg>
+      <div class="li-stats"><span>&#128077;&#10084;&#65039;&#128161; 214</span><span>32 comments &#183; 9 reposts</span></div>
+      <div class="li-actions"><span>&#128077; Like</span><span>&#128172; Comment</span><span>&#128257; Repost</span><span>&#10148; Send</span></div>
     </div>
+    <p class="post-note">Themes covered: privacy in Indian homes &#183; Indian culture (aangan, jaali, haveli) &#183; how people think about boundaries &#183; conventional walls' limitation. Brand enters in one line, as a question.</p>
 
-    <div class="post">
-      <div class="byline">Hitendra (H.M.) Panchal</div>
-      <div class="role">Founder &amp; CEO, Indonet Group &#183; Post 2 &#8212; On Make in India &amp; Manufacturing Trust</div>
-      <p>A question I get often: "Why manufacture in India when it's simpler to import?"</p>
-      <p>It isn't simpler. It's just been more familiar for longer.</p>
-      <p>When we set up our first plant in Waghodia, most of what our category needed was imported, made without much thought for Indian weather, soil, or budgets. Three plants and six group companies later, the biggest advantage we've built isn't scale &#8212; it's proximity to the problem.</p>
-      <p>That's the thinking behind LatoFence too. It didn't start as a launch. It started as a question: why should something as ordinary as a boundary be the one part of an Indian home nobody designs for?</p>
-      <p>Curious how other manufacturers think about this trade-off &#8212; proximity versus scale. Where has it paid off for you?</p>
+    <h3>Post 2 &#8212; Ownership, aspiration, and the generation that won't wait</h3>
+    <div class="li-card">
+      <div class="li-head">
+        <div class="li-ava">HP</div>
+        <div>
+          <div class="li-name">Hitendra Panchal <span>&#183; 3rd+</span></div>
+          <div class="li-sub">Founder &amp; CEO, Indonet Group<br>1w &#183; Edited</div>
+        </div>
+      </div>
+      <div class="li-body">
+        <p><strong>A customer in Rajkot built his house over eleven years.</strong></p>
+        <p>First the two rooms. Then the first floor, the year his daughter was born. The kitchen tiles came the year the business finally turned around.</p>
+        <p>Every brick had a story. Except the boundary.</p>
+        <p>For eleven years, the boundary was a line of thorny bushes and one standing promise: "agle saal pakka."</p>
+        <p>When I asked him why, his answer stayed with me: "Deewar ke liye mistri chahiye, mahina chahiye, aur mahaul chahiye." A wall needs a mason, a month, and the right mood.</p>
+        <p>His son disagreed with the whole premise. He wanted the boundary done the way his generation finishes everything &#8212; order it, get it delivered, do it yourself, done by Sunday.</p>
+        <p>That one courtyard conversation is modern India. Ownership used to mean waiting your turn &#8212; for the mason, for the season, for the loan. For this generation, ownership means doing.</p>
+        <p>It's why we now engineer for Indian sun, Indian rain &#8212; and Indian weekends. LATO Fence installs without a single outside hand, and that is not a convenience feature. It's a cultural one.</p>
+        <p>The house in Rajkot got its boundary in an afternoon. Eleven years, then three hours.</p>
+        <p>What's the one thing in your home that waited years for "agle saal"?</p>
+      </div>
+      <svg class="li-img" viewBox="0 0 555 300" role="img" aria-label="Illustration: a house built over years, its boundary finally completed with lattice panels" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="morn" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#DDEFDC"/><stop offset="1" stop-color="#C2E3C0"/>
+          </linearGradient>
+          <pattern id="lat2" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(45 0 0)">
+            <rect width="26" height="26" fill="#B85431"/>
+            <rect x="3.5" y="3.5" width="19" height="19" fill="#DDEFDC"/>
+          </pattern>
+        </defs>
+        <rect width="555" height="300" fill="url(#morn)"/>
+        <circle cx="468" cy="66" r="34" fill="#F5C64F"/>
+        <rect y="216" width="555" height="84" fill="#4C8A3F"/>
+        <g>
+          <rect x="204" y="96" width="150" height="120" fill="#FBF6EE"/>
+          <rect x="204" y="146" width="150" height="4" fill="#E4D9C8"/>
+          <path d="M196 96 L279 52 L362 96 Z" fill="#B85431"/>
+          <rect x="262" y="162" width="34" height="54" fill="#7A4A21"/>
+          <rect x="222" y="112" width="26" height="22" fill="#F5C64F"/>
+          <rect x="310" y="112" width="26" height="22" fill="#F5C64F"/>
+          <rect x="222" y="166" width="26" height="22" fill="#F5C64F"/>
+          <rect x="310" y="166" width="26" height="22" fill="#F5C64F"/>
+        </g>
+        <g stroke="#7B9A74" stroke-width="4" stroke-dasharray="10 12" stroke-linecap="round">
+          <line x1="30" y1="216" x2="180" y2="216"/>
+        </g>
+        <g>
+          <rect x="376" y="160" width="72" height="56" fill="url(#lat2)"/>
+          <rect x="452" y="160" width="72" height="56" fill="url(#lat2)"/>
+          <rect x="372" y="156" width="156" height="6" fill="#8A3D20"/>
+          <rect x="372" y="214" width="156" height="6" fill="#8A3D20"/>
+          <rect x="372" y="156" width="6" height="64" fill="#8A3D20"/>
+          <rect x="448" y="156" width="6" height="64" fill="#8A3D20"/>
+          <rect x="522" y="156" width="6" height="64" fill="#8A3D20"/>
+        </g>
+        <g>
+          <rect x="72" y="238" width="46" height="34" rx="4" fill="#B85431"/>
+          <rect x="78" y="230" width="34" height="8" rx="2" fill="#8A3D20"/>
+          <text x="95" y="262" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#FBF6EE" text-anchor="middle">LATO</text>
+        </g>
+      </svg>
+      <div class="li-stats"><span>&#128077;&#10084;&#65039;&#128161; 187</span><span>41 comments &#183; 12 reposts</span></div>
+      <div class="li-actions"><span>&#128077; Like</span><span>&#128172; Comment</span><span>&#128257; Repost</span><span>&#10148; Send</span></div>
     </div>
+    <p class="post-note">Themes covered: safety, ownership, aspiration &#183; changing lifestyles &#183; conventional fences' limitations &#183; why LATO matters in modern India. One brand mention, earned by the story.</p>
   </section>
 
   <!-- ================= SUMMARY ================= -->
