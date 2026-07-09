@@ -71,10 +71,10 @@
   .hero .meta strong { color: #FFFFFF; }
 
   /* ---------- toc ---------- */
-  nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 8px; }
+  nav.toc { display: flex; flex-wrap: nowrap; gap: 8px; margin: 28px 0 8px; overflow-x: auto; padding-bottom: 4px; }
   nav.toc a {
-    text-decoration: none; font-size: 13px; font-weight: 600; color: var(--ink-2);
-    border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 14px;
+    text-decoration: none; font-size: 12px; font-weight: 600; color: var(--ink-2);
+    border: 1px solid var(--hairline); border-radius: 999px; padding: 5px 11px; white-space: nowrap; flex: 0 0 auto;
   }
   nav.toc a:hover, nav.toc a:focus-visible { color: var(--accent); border-color: var(--accent); outline: none; }
 
@@ -138,6 +138,7 @@
   .fold p { color: #EAF7EB; max-width: 42ch; margin: 0 0 26px; font-size: 15.5px; }
   .fold .ctas { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
   .fold .cta { background: #E74623; color: #FFF; font-size: 12px; letter-spacing: .1em; font-weight: 700; padding: 12px 22px; border-radius: 4px; }
+  .fold .ctab { background: transparent; color: #FFF; border: 1.5px solid #FFFFFF; font-size: 12px; letter-spacing: .1em; font-weight: 700; padding: 10.5px 22px; border-radius: 4px; }
   .fold .cta2 { font-size: 12px; letter-spacing: .1em; color: #FFFFFF; border-bottom: 1px solid #FFD9CC; padding-bottom: 3px; }
   .fold .trust { border-top: 1px solid rgba(255,255,255,.3); margin-top: 38px; padding-top: 16px; font-size: 12px; letter-spacing: .06em; color: #DCEFDC; }
   .figcap { font-size: 13px; color: var(--ink-2); font-style: italic; margin: 8px 2px 0; }
@@ -161,10 +162,9 @@
 
 <div class="hero">
   <div class="hero-inner">
-    <span class="eyebrow">Creative Strategist Task Response</span>
     <h1>LATO Fence</h1>
     <p class="tag">Control your space.</p>
-    <p style="max-width:64ch; color:#EAF7EB; margin:0 0 26px;">A content, brand, distribution &amp; website strategy. Every answer direct and up front, in the order the brief asked the questions &#8212; every reason in the appendix, same order.</p>
+    <p style="max-width:64ch; color:#EAF7EB; margin:0 0 26px;">A content, brand, distribution &amp; website strategy.</p>
     
   </div>
 </div>
@@ -217,10 +217,6 @@
       <div class="card"><h4>No One Else Needed</h4><p class="sub">Fully DIY &#8212; order, install, done. No contractor.</p></div>
     </div>
 
-    <h3>Brand tone of voice</h3>
-    <p><strong>Say it like this:</strong> <em>"Aapka ghar ban gaya. Ab boundary bhi thoda upgrade kar dein?"</em> &#8212; plain, warm, Hindi/Hinglish for reach, English for LinkedIn and premium content.<br>
-    <strong>Never like this:</strong> <em>"Our polymer technology ensures superior UV-stabilized performance."</em></p>
-
     <h3>The headline stack &#8212; one line per stage of awareness</h3>
     <p class="lede">Every asset in this submission executes one of these five lines. Full development log &#8212; every variation tested, scored, and why each won or lost &#8212; in the appendix.</p>
     <div class="stack">
@@ -239,12 +235,14 @@
 
     <div class="grid two">
       <div class="card">
-        <h4>Structure (SB7 framework)</h4>
-        <p><strong>Hero</strong> &#8212; character + problem + direct CTA: "Control your space," no contractor, no wait.<br>
-        <strong>Stakes</strong> &#8212; one struck-through line: what the old defaults cost you.<br>
-        <strong>Guide</strong> &#8212; ISO 9001:2015, three plants, one group story &#8212; proof, not paragraphs.<br>
-        <strong>Plan</strong> &#8212; three steps: Choose, Order, Install. Numbered because it's a real sequence.<br>
-        <strong>CTA</strong> &#8212; Order Now (direct) + "Try It First" &#8212; a named sample-panel program, not a footnote.</p>
+        <h4>Structure (SB7 framework &#8212; all seven parts, mapped to the page)</h4>
+        <p><strong>1 &#183; A character</strong> &#8212; the owner who wants control of their space.<br>
+        <strong>2 &#183; Has a problem</strong> &#8212; exposure, and defaults that cost money, labour and weeks.<br>
+        <strong>3 &#183; Meets a guide</strong> &#8212; Indonet: ISO 9001:2015, three plants &#8212; proof, not paragraphs.<br>
+        <strong>4 &#183; Who gives them a plan</strong> &#8212; three steps: Choose, Order, Install.<br>
+        <strong>5 &#183; And calls them to action</strong> &#8212; Order Now + Book Now + "Try It First" sample panel.<br>
+        <strong>6 &#183; That helps them avoid failure</strong> &#8212; one struck-through line: what staying with brick, iron or bamboo keeps costing.<br>
+        <strong>7 &#183; And ends in success</strong> &#8212; the space, finally theirs: light in, eyes out, done in a weekend.</p>
       </div>
       <div class="card">
         <h4>Why SOA2, not every visitor</h4>
@@ -260,7 +258,7 @@
         <div class="eyebrow">BY INDONET</div>
         <h1>Control your space.</h1>
         <p>No contractor. No wait. Order your panels, install them yourself, and it's done &#8212; this weekend.</p>
-        <div class="ctas"><span class="cta">ORDER NOW</span><span class="cta2">GET A SAMPLE PANEL FIRST</span></div>
+        <div class="ctas"><span class="cta">ORDER NOW</span><span class="ctab">BOOK NOW</span><span class="cta2">GET A SAMPLE PANEL FIRST</span></div>
         <div class="trust">ISO 9001:2015 &nbsp;&#183;&nbsp; MADE IN INDIA BY INDONET &nbsp;&#183;&nbsp; UV-STABILIZED &nbsp;&#183;&nbsp; TERMITE &amp; RUST PROOF &nbsp;&#183;&nbsp; DIY CLICK-FIT</div>
       </div>
     </div>
